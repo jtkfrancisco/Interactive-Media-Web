@@ -1,0 +1,289 @@
+<!-- Homework assignment 02--Justin Francisco-->
+<!-- item naming convention:
+Master Classes = Master_Class
+Sub Classes = subClass -->
+<!doctype html>
+<head>
+	<style type="text/css">
+		.memeText{
+			position: absolute;
+			top: 420px;
+			left: 20.4px;
+			font-size: 25px;
+			font-family: Impact, fantasy;
+
+		}
+		.Face_Master{
+			position: absolute;
+			top:80px;
+		}
+		.MyFaceWhen_Master{position: absolute; left: 112px;}
+		.M_Master{}
+		.F_Master{}
+		.W_Master{
+			position: absolute; 
+			left: 287px; 
+			top: 95px;
+			transform: rotate(180deg);
+		}
+		.headCircle{
+			position: absolute;
+			background: black;
+			height:280px;
+			width:280px;
+			top:18px;
+			left:108px;
+			border-radius: 50%;
+		}
+		.headOval{
+			position: absolute;
+			background: black;
+			height:280px;
+			width:244px;
+			top:45px;
+			left:125px;
+			border-radius: 50%;
+		}
+		/*.chinSquare{
+		    position: absolute;
+		    background: black;
+		    height: 180px;
+		    width: 144px;
+		    top: 152px;
+		    left: 175px;
+		    border-radius: 25%;
+		}*/
+		.leftEye{
+		    position: absolute;
+		    background: white;
+		    height: 50px;
+		    width: 50px;
+		    top: 150px;
+		    left: 270px;
+		    border-radius: 50%;
+		}
+		.rightEye{
+		    position: absolute;
+		    background: white;
+		    height: 50px;
+		    width: 50px;
+		    top: 150px;
+		    left: 175px;
+		    border-radius: 50%;
+		}
+		.rightBrow{
+			position: absolute;
+		    background: white;
+		    height: 10px;
+		    width: 50px;
+		    top: 120px;
+		    left: 287px;
+		    transform: rotate(25deg);
+		}
+		.leftBrow{
+			position: absolute;
+		    background: white;
+		    height: 10px;
+		    width: 50px;
+		    top: 120px;
+		    left: 164px;
+		    transform: rotate(-25deg);
+		}
+/*		.rightEyeMask{
+			position: absolute;
+		    background: black;
+		    height: 20px;
+		    width: 50px;
+		    top: 140px;
+		    left: 270px;
+		    border-radius: 50%;
+		}*/
+/*		.leftEyeMask{
+			position: absolute;
+		    background: black;
+		    height: 20px;
+		    width: 50px;
+		    top: 140px;
+		    left: 175px;
+		    border-radius: 50%;
+		}*/
+		.rightEyeMask2{
+			position: absolute;
+		    background: black;
+		    height: 20px;
+		    width: 50px;
+		    top: 180px;
+		    left: 270px;
+		    border-radius: 50%;
+		}
+		.leftEyeMask2{
+			position: absolute;
+		    background: black;
+		    height: 20px;
+		    width: 50px;
+		    top: 180px;
+		    left: 175px;
+		    border-radius: 50%;
+		}
+		.mouth{
+			position: absolute;
+		    background: white;
+		    height: 20px;
+		    width: 50px;
+		    top: 240px;
+		    left: 220px;
+		}
+		.mouth2{
+			position: absolute;
+		    background: white;
+		    height: 42px;
+		    width: 50px;
+		    top: 218px;
+		    left: 220px;
+		    border-radius: 50%;
+		}
+		.mouthMask{
+			position: absolute;
+		    background: black;
+		    height: 42px;
+		    width: 50px;
+		    top: 252px;
+		    left: 220px;
+		    border-radius: 50%;
+		}
+		.Mstroke1{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 75px; 
+			top: 10px; 
+			left: 30px;
+		}
+		.Mstroke2{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 75px; 
+			top: 13px; 
+			left: 46px;
+			transform: rotate(-25deg);
+		}
+		.Mstroke3{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 75px; 
+			top: 13px; 
+			left: 72px;
+			transform: rotate(25deg);
+		}
+		.Mstroke4{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 75px; 
+			top: 10px; 
+			left: 88px;
+		}
+		.Fstroke1{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 75px; 
+			top: 10px; 
+			left: 115px;
+		}
+		.Fstroke2{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 51px; 
+			top: -8px; 
+			left: 140px;
+			transform: rotate(90deg);
+		}
+		.Fstroke3{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 30px; 
+			top: 34px; 
+			left: 137px;
+			transform: rotate(90deg);
+		}
+		.Wstroke1{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 75px; 
+			top: 10px; 
+			left: 30px;
+		}
+		.Wstroke2{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 48px; 
+			top: 9px; 
+			left: 46px;
+			transform: rotate(-39deg);
+		}
+		.Wstroke3{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 48px; 
+			top: 9px; 
+			left: 72px;
+			transform: rotate(39deg);
+		}
+		.Wstroke4{
+			position: absolute; 
+			background: black; 
+			width: 15px; 
+			height: 75px; 
+			top: 10px; 
+			left: 88px;
+		}
+	</style>
+</head>
+<body>
+	<div class="Face_Master">
+		<div class="headCircle"></div>
+		<div class="headOval"></div>
+<!-- 		<div class="chinSquare"></div> -->
+		<div class="leftEye"></div>
+		<div class="rightEye"></div>
+		<div class="rightBrow"></div>
+		<div class="leftBrow"></div>
+		<div class="rightEyeMask"></div>
+		<div class="leftEyeMask"></div>
+		<div class="rightEyeMask2"></div>
+		<div class="leftEyeMask2"></div>
+		<div class="mouth"></div>
+		<div class="mouth2"></div>
+		<div class="mouthMask"></div>
+	</div>
+	<div class="MyFaceWhen_Master">
+		<div class="M_Master">
+			<div class="Mstroke1"></div>
+			<div class="Mstroke2"></div>
+			<div class="Mstroke3"></div>
+			<div class="Mstroke4"></div>
+		</div>
+
+		<div class="F_Master">
+			<div class="Fstroke1"></div>
+			<div class="Fstroke2"></div>
+			<div class="Fstroke3"></div>
+		</div>
+
+		<div class="W_Master">
+			<div class="Wstroke1"></div>
+			<div class="Wstroke2"></div>
+			<div class="Wstroke3"></div>
+			<div class="Wstroke4"></div>
+		</div>
+	</div>
+	<div class="memeText">The prof assigns an illustration project using CSS</div>
+</body>
