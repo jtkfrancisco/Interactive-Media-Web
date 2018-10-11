@@ -1,25 +1,12 @@
 html {
     height: 100%;
 }
-
-body{
-	background: black;
-	padding: 0;
+body {
+    padding: 0;
     margin: 0;
     height: 100%;
     overflow: hidden;
 }
-
-.title{color: red; text-align: center;}
-.subtitle{}
-.description{}
-.date{}
-.location{}
-.location2{}
-.location3{}
-.disclaimer{}
-.bodyCopy{}
-.bodyCopy2{}
 
 .canvas {
     width: 100%;
@@ -27,6 +14,7 @@ body{
     background: url("https://unsplash.it/2048/2048?random") no-repeat center;
     background-size: cover;
 }
+
 .searchlight {
     position: absolute;
     z-index: 100;
@@ -51,5 +39,3 @@ body{
     background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* IE10+ */
     background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* W3C */
 }
-
-
