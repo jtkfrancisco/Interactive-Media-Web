@@ -1,0 +1,91 @@
+html,
+body{
+}
+
+.redButton{
+	position: absolute;
+	background: red;
+	color: white;
+	top:20px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index: 100;
+	overflow:hidden
+}
+
+.greenButton{
+	position: absolute;
+	background: green;
+	color: white;
+	top:80px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index: 100;
+	overflow:hidden
+}
+
+.blueButton{
+	position: absolute;
+	background: blue;
+	color: white;
+	top:140px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index:100;
+	overflow:hidden
+}
+
+.blackSquare{
+	position: absolute;
+	background: black;
+	color: white;
+	top:200px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index:100;
+}
+
+.redChannel{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("img/Flower_Red_Coloured.png");
+    mix-blend-mode: screen;
+    opacity:1;
+}
+
+.greenChannel{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("img/Flower_Green_Coloured.png");
+    mix-blend-mode: screen;
+    opacity:1;
+}
+
+.blueChannel{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("img/Flower_Blue_Coloured.png");
+    mix-blend-mode: screen;
+    opacity:1;
+}

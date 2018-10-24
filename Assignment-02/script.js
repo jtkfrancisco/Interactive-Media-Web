@@ -1,6 +1,6 @@
 var lightningTime = 0; //determines number of milliseconds between "lightning" strikes
-var max = 10000;
-var min = 5000;
+var max = 4000;
+var min = 2000;
 var flashTime = 0; //determines length of the lightning effect
 //var count = 0; 
 var backgroundSound = new Audio("audio/Rain_Background.mp3");
