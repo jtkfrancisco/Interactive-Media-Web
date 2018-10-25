@@ -1,6 +1,54 @@
 var redOn=true;
 var greenOn=true;
 var blueOn=true;
+var autoOn=false;
+
+var t = 0;
+
+var horizontalCenter = Math.floor(window.innerWidth/2);
+var verticalCener = Math.floor(window.innerHeight/2);
+
+function moveit(){
+    t += 0.03;
+
+    var r = 300;         // radius
+    var xcenter = horizontalCenter;   // center X position
+    var ycenter = verticalCener;   // center Y position
+
+    var newLeft = Math.floor(xcenter + (r * Math.cos(t)));
+    var newTop = Math.floor(ycenter + (r * Math.sin(t)));
+
+    console.log(newTop);
+	console.log(newLeft);
+
+    $('.testDiv').animate({
+        top: newTop,
+        left: newLeft,
+    }, 1, function() {
+        moveit();
+    });
+    $(".greenChannel").css("opacity",newLeft)
+    $(".greenButton").text(newLeft)
+}
+
+
+
+// $(document).ready(function() {
+//     moveit();
+// });​
+
+// $(".autoButton").click(moveit())
+
+$(".autoButton").click(function(){
+	if (autoOn==false){
+		$(".autoButton").text("Auto-ON");
+		autoOn=true;
+		moveit();
+	} else {
+		$(".autoButton").text("Auto-OFF");
+		autoOn=false;
+	}
+})
 
 $(".redButton").click(function(){
 	if (redOn==true){
@@ -40,11 +88,6 @@ $(".blueButton").click(function(){
 
 $("html").mousemove(function(){
 	$(".blackSquare").text(event.pageX + ", " + event.pageY);
-
-	// verticalPos=event.pageY-window.innerWidth;
-	// horisontalPos=event.pageX-window.innerHeight;
-	// $(".greenChannel").css("top",verticalPos);
-	// $(".greenChannel").css("left",horisontalPos);
 
 	xPos=event.pageX/window.innerWidth;
 	$(".redChannel").css("opacity",xPos)

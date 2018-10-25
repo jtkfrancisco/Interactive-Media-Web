@@ -57,6 +57,31 @@ body{
 	z-index:100;
 }
 
+.autoButton{
+	position: absolute;
+	background: yellow;
+	color: black;
+	top:270px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index:100;
+}
+
+.testDiv{
+    position: absolute;
+    background: purple;
+    top: 340px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    stroke: white;
+    stroke-width: 2px;
+    z-index: 100;
+}
+
 .redChannel{
 	position: absolute;
     top: 0px;
