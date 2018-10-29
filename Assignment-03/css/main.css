@@ -70,31 +70,31 @@ body{
 	z-index:100;
 }*/
 
-.testDiv{
+.greenDiv{
     position: absolute;
     background: green;
-    top: 340px;
-    left: 20px;
+    top: 0px;
+    left: 5px;
     width: 1px;
     height: 100%;
     z-index: 100;
 }
 
-.testDiv2{
+.redDiv{
     position: absolute;
     background: red;
-    top: 340px;
-    left: 25px;
+    top: 0px;
+    left: 10px;
     width: 1px;
     height: 100%;
     z-index: 100;
 }
 
-.testDiv3{
+.blueDiv{
     position: absolute;
     background: blue;
-    top: 340px;
-    left: 30px;
+    top: 0px;
+    left: 15px;
     width: 1px;
     height: 100%;
     z-index: 100;
