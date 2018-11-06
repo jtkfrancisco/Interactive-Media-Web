@@ -1,0 +1,205 @@
+html,
+body{
+}
+
+.C{
+	position: absolute;
+	top: -3%;
+    left: 0;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 12.8rem;
+    color: cyan;
+    z-index: 200;
+}
+.M{
+	position: absolute;
+	top: -3%;
+    left: 88%;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 12.8rem;
+    color: magenta;
+    z-index: 200;
+    text-align: right;
+}
+.Y{
+	position: absolute;
+    top: 72%;
+    left: 89%;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 12.8rem;
+    color: yellow;
+    z-index: 200;
+    text-align: right;
+}
+.K{
+	position: absolute;
+    top: 72%;
+    left: 0;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 12.8rem;
+    color: black;
+    z-index: 200;
+}
+
+.controls{
+	position: absolute;
+    top: 31%;
+    left: -5px;
+}
+
+.cyanButton{
+	position: absolute;
+	background: cyan;
+	color: black;
+	top:20px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index: 100;
+	overflow:hidden
+}
+
+.magentaButton{
+	position: absolute;
+	background: magenta;
+	color: black;
+	top:80px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index: 100;
+	overflow:hidden
+}
+
+.yellowButton{
+	position: absolute;
+	background: yellow;
+	color: black;
+	top:140px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index:100;
+	overflow:hidden
+}
+
+.keyButton{
+	position: absolute;
+	background: black;
+	color: white;
+	top:200px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index:100;
+}
+
+/*.autoButton{
+	position: absolute;
+	background: yellow;
+	color: black;
+	top:270px;
+	left:20px;
+	width: 50px;
+	height: 50px;
+	stroke: white;
+	stroke-width: 2px;
+	z-index:100;
+}*/
+
+.magentaDiv{
+    position: absolute;
+    background: magenta;
+    top: 0px;
+    left: 5px;
+    width: 1px;
+    height: 100%;
+    z-index: 100;
+}
+
+.cyanDiv{
+    position: absolute;
+    background: cyan;
+    top: 0px;
+    left: 10px;
+    width: 1px;
+    height: 100%;
+    z-index: 100;
+}
+
+.yellowDiv{
+    position: absolute;
+    background: yellow;
+    top: 0px;
+    left: 15px;
+    width: 1px;
+    height: 100%;
+    z-index: 100;
+}
+
+.centralBox{
+	position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    background: lightgrey;
+    margin: -15px 0 0 -15px;
+    z-index: 200;
+}
+
+.cyanChannel{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("img/Cyan_Screen.jpg");
+    mix-blend-mode: multiply;
+    opacity:1;
+}
+
+.magentaChannel{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("img/Magenta_Screen.jpg");
+    mix-blend-mode: multiply;
+    opacity:1;
+}
+
+.yellowChannel{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("img/Yellow_Screen.jpg");
+    mix-blend-mode: multiply;
+    opacity:1;
+}
+
+.keyChannel{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url("img/key_Screen.jpg");
+    mix-blend-mode: multiply;
+    opacity:1;
+}
