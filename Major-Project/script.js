@@ -84,20 +84,21 @@ setBackground()
 //12 = 720
 //18 = 1080
 //24 = 1440
-
+//greeting case change
 if(timeInMinutes>0 && timeInMinutes<360){$(".inquiry").text("It's very early, how are you feeling?")}
 if(timeInMinutes>360 && timeInMinutes<720){$(".inquiry").text("how are you feeling this morning?")}
 if(timeInMinutes>720 && timeInMinutes<1080){$(".inquiry").text("how are you feeling this afternoon?")}
 if(timeInMinutes>1080 && timeInMinutes<1440){$(".inquiry").text("how are you feeling this evening?")}
 
-// Store
 
-userInput = $(".formInput").value
+//initial name get and setup
+if(localStorage.getItem("userName")==undefined){
+	userInput = prompt("Hello, its lovely to meet you. Can I ask your name?")
+	// Store
+	localStorage.setItem("userName", userInput);
+	$(".greeting").text("hello there, "+userInput)
+}
 
-$(".greeting").text("hello there, "+userInput)
-
-//localStorage.setItem("userName", userInput);
-// Retrieve
-//userName = localStorage.getItem("userName");
-
-// document.cookie = "username="+userName+"; expires=Thu, 18 Dec 2013
+//Retrieve name
+userName = localStorage.getItem("userName");
+$(".greeting").text("hello again, "+userName)

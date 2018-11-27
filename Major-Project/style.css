@@ -3,8 +3,11 @@ html{
 
 .background{
 	position: absolute;
-	height: 99%;
-	width: 99%;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+    background: url("img/Magenta_Screen.jpg");
 	background-image: url("img/0279.png");
 	background-repeat: no-repeat;
     background-size: cover;
@@ -73,14 +76,10 @@ html{
     top: -51px;
     width: 180px;
     height: 30px;
-    font-size: 3rem;
-    font-family: sans-serif;
-    color: white;
-    text-align: center;
-    line-height: 29px;
  }
  .formInput{
 	position: absolute;
+	color: white;
     left: 3px;
     top: 60px;
     width: 213px;
@@ -98,7 +97,6 @@ html{
     top: 58%;
     left: 4%;
     font-size: 3rem;
-    /*background: cornflowerblue;*/
     width: 605px;
     height: 60px;
 }
