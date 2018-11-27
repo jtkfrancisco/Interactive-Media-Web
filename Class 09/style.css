@@ -1,0 +1,56 @@
+body{
+	background: black;
+}
+
+.section1{
+	background: orange;
+	position: absolute;
+	width: 50px;
+	height: 100px;
+	top:50px;
+	left:50%;
+}
+
+.section2{
+	background: purple;
+	position: absolute;
+	width: 50px;
+	height: 100px;
+	top:2500px;
+	left:50%;
+}
+
+.section3{
+	background: red;
+	color: white;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top:800px;
+	left:0%;
+	font-size: 20px;
+}
+.section4{
+	background: blue;
+	position: absolute;
+	width: 50px;
+	height: 100px;
+	top:1200px;
+	left:25%;
+}
+.section5{
+	background: green;
+	position: absolute;
+	width: 50px;
+	height: 100px;
+	top:1600px;
+	left:50%;
+}
+.section6{
+	background: teal;
+	position: absolute;
+	width: 50px;
+	height: 100px;
+	top:2000px;
+	left:75%;
+}

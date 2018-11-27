@@ -1,0 +1,19 @@
+{
+ "manifest_version": 2,
+ "name": "Cozy Chrome Hub",
+ "description": "A cosy and warm chrome hub, displaying the date, time, weather and a companion to keep you company.",
+ "version": "1",
+ "author": "Justin Francisco",
+"browser_action": {
+   "default_icon": "icon-03.png",
+   "default_title": "Have a good day"
+ },
+ "background":{	
+ 	"scripts": ["jquery.js", "script.js"]
+},
+"chrome_url_overrides" : {
+  "newtab": "index.html"
+},
+ "permissions": ["activeTab"]
+
+}
