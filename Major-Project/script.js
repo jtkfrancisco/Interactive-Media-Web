@@ -1,104 +1,44 @@
-//alert(h+":"+m)
+//todo
+//animate background based on last refresh time [maybe]
+//chatbot flowchart 
+//flowchart data storage so users can refelct on how theyve been feeling
+//implement settings and suggestions [reset name, manual city]
+//make statements reflect sunset times
 
-//date returns in 24h time. 
-//every 4 minute the image will change.
+ipLookUp()
+setBackground()
 
-//frames are in the following format:
-//0001.png - 0360.png
+$(".settingsIcon").on("click", function(){
+	$(".settingsBox").animate({height: "340px", width:"210px" , right: "4.7%" , bottom:"6%"},500)
+	$(".x").css("display", "initial")
+	$(".settingsTitle").css("display","initial")
+	$(".setting1").css("display","initial")
+	$(".setting2").css("display","initial")
+	$(".setting3").css("display","initial")
 
-//what needs to be done in order to make the image change every 4 minutes?
-
-//image set starts at noon. 
-//frame 0001.png is the sun directly above and time progresses forward like that.
-//i want each image to fade to the next.
-
-//1440 minutes in the day / 360 is 4.
-
-//0 = 0
-//6 = 360
-//12 = 720
-//18 = 1080
-//24 = 1440
-
-//1440/4 is 360
-
-var apiURL ="https://api.openweathermap.org/data/2.5/weather?q=Toronto,ca&appid=43951fde831b13d6b31b5c68c389d843"
-var d = new Date();
-
-var timeInMinutes = 0
-
-startString3 = "000"
-startString2 = "00"
-startString1 = "0"
-frameTime = 1
-frameName = "0000.png"
-frameURL="0"
-
-
-//open weather map key:
-//43951fde831b13d6b31b5c68c389d843
-$.ajax({
-	url: apiURL,
-	success: function(weather){
-		$(".weatherNumber").html((weather.main.temp-273.15).toFixed(1)+"&deg; in Toronto");
-		console.log("The cloudiness percentage is "+weather.clouds.all)
-		console.log("The humidity percentage is "+weather.main.humidity)
-		console.log("The rain in the last hour was "+weather.rain)
-	}
+})
+$(".x").on("click",function(){
+	$(".settingsBox").animate({height: "0", width:"0" , right:"5.88%" , bottom:"8.004%"},500)
+	$(".x").css("display", "none")
+	$(".settingsTitle").css("display","none")
+	$(".setting1").css("display","none")
+	$(".setting2").css("display","none")
+	$(".setting3").css("display","none")
 })
 
 
-function setBackground(){
-	//get time
-	minute = d.getMinutes();
-	hour = d.getHours();
-	//convert time
-	timeInMinutes=hour*60+minute
-	frameTime = (timeInMinutes/4).toFixed(0)
-	console.log("frame time is "+frameTime)
-		//convert for proper filename and change background based on time
-		if(frameTime<10){
-		frameName = startString3+frameTime
-		frameTime+=1
-		console.log("frame name is "+frameName)
-		$(".background").css("background-image",'url(img/'+frameName+'.png)')
-	}
-		if(frameTime<100 && frameTime>10){
-		frameName = startString2+frameTime
-		frameTime+=1
-		console.log("frame name is "+frameName)
-		$(".background").css("background-image",'url(img/'+frameName+'.png)')
-	}
-		if(frameTime<361 && frameTime>100){
-		frameName = startString1+frameTime
-		frameTime+=1
-		console.log("frame name is "+frameName)
-		$(".background").css("background-image",'url(img/'+frameName+'.png)')
-	}
-}
-
-setBackground()
-
-//0 = 0
-//6 = 360
-//12 = 720
-//18 = 1080
-//24 = 1440
-//greeting case change
-if(timeInMinutes>0 && timeInMinutes<360){$(".inquiry").text("It's very early, how are you feeling?")}
-if(timeInMinutes>360 && timeInMinutes<720){$(".inquiry").text("how are you feeling this morning?")}
-if(timeInMinutes>720 && timeInMinutes<1080){$(".inquiry").text("how are you feeling this afternoon?")}
-if(timeInMinutes>1080 && timeInMinutes<1440){$(".inquiry").text("how are you feeling this evening?")}
-
-
-//initial name get and setup
-if(localStorage.getItem("userName")==undefined){
-	userInput = prompt("Hello, its lovely to meet you. Can I ask your name?")
-	// Store
-	localStorage.setItem("userName", userInput);
-	$(".greeting").text("hello there, "+userInput)
-}
-
-//Retrieve name
-userName = localStorage.getItem("userName");
-$(".greeting").text("hello again, "+userName)
+$(".option1").on("click", function(){
+	$(".response").text("That is great!");
+	$(".response").fadeIn(fadeTime)
+	swipeAwayOptions()
+})
+$(".option2").on("click",function(){
+	$(".response").text("Is something wrong?");
+	$(".response").fadeIn(fadeTime)
+	swipeAwayOptions()
+})
+$(".option3").on("click",function(){
+	$(".response").text("Oh, I hope you feel better soon...")
+	$(".response").fadeIn(fadeTime)
+	swipeAwayOptions()
+})

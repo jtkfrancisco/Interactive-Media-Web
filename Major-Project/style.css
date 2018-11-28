@@ -36,13 +36,24 @@ html{
 	height: 100px;
 }
 
+.settingsIcon{
+	position: absolute;
+    opacity: 50%;
+    height: 30px;
+    width: 30px;
+    top: 90%;
+    right: 5%;
+}
 .weatherNumber{
 	position: absolute;
-	top: 75px;
-	color: white;
-	text-align: center;
-	font-family: sans-serif;
-	font-size: 2rem;
+    top: 75px;
+    left: -43px;
+    color: white;
+    height: 70px;
+    width: 240px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2rem;
 }
 
 .mainTextBox{
@@ -68,6 +79,15 @@ html{
 	font-size: 2rem;
 	font-family: sans-serif;
 	color: white;
+}
+
+.response{
+	position: absolute;
+	top: 170px;
+	font-size: 2rem;
+	font-family: sans-serif;
+	color: white;
+	display: none;
 }
 
 .form{
@@ -180,3 +200,95 @@ html{
     background: white;
 }
 
+.settingsBox{
+    position: absolute;
+    right: 5.88%;
+    bottom: 8.004%;
+    width: 0;
+    height: 0;
+
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 5px;
+
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 29px;
+    z-index:-100;
+}
+
+.x{
+	position: absolute;
+	top:5px;
+	right:5px;
+	width: 20px;
+	height: 20px;
+	display: none;
+}
+
+.settingsTitle{
+	position: absolute;
+	top:2px;
+    left: 11px;
+    width: 180px;
+    height: 30px;
+    border-width: 2px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 28px;
+    display: none;
+}
+
+.setting1{
+	position: absolute;
+	top:40px;
+    left: 11px;
+    width: 180px;
+    height: 30px;
+    border-width: 2px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 28px;
+    display: none;
+}
+
+.setting2{
+	position: absolute;
+	top:60px;
+    left: 11px;
+    width: 180px;
+    height: 30px;
+    border-width: 2px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 28px;
+    display: none;
+}
+
+.setting3{
+	position: absolute;
+	top:80px;
+    left: 11px;
+    width: 180px;
+    height: 30px;
+    border-width: 2px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
+    line-height: 28px;
+    display: none;
+}
