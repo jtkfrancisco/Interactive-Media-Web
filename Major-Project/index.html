@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Cozy Hub</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta charset="UTF-8">
 </head>
 <body>
 
@@ -10,29 +11,50 @@
 		<img class="weatherIcon" src="icons/cloudy.png"></img>
 		<div class="weatherNumber">null&deg; in location</div>
 	</div>
+
+	<div class="reminder">Please open a new tab to load data.</div>
+
 	<div class="mainTextBox">
 		<div class="greeting">Hello there, </div>
 		<div class="inquiry">How are you doing today?</div>
+		<div class="userInputBox">
+			<div class="option1">Great!</div>
+			<div class="option3">Not great...</div>
+			<img class="graphButton" src="icons/graph-12.png"></img>
+			<div class="closeGraphButton"></div>
+		</div>
 		<div class="response">How are you doing today?</div>
 	</div>
-	<div class="userInputBox">
-		<div class="option1">Great!</div>
-		<div class="option2">I'm okay.</div>
-		<div class="option3">Not great...</div>
+
+	<div class="canvas">
+		<div class="median"></div>
+		<div class="daysContainer">
+			<div class="day0">Sunday</div>
+			<div class="day1">Monday</div>
+			<div class="day2">Tuesday</div>
+			<div class="day3">Wednesday</div>
+			<div class="day4">Thursday</div>
+			<div class="day5">Friday</div>
+			<div class="day6">Saturday</div>
+		</div>
 	</div>
 
-	<img class="settingsIcon" src="icons/settings.png"></img>
-	<div class="settingsBox">
-		<div class="settingsTitle">Click to toggle</div>
-		<div class="setting1">setting 1</div>
-		<div class="setting2">setting 2</div>
-		<div class="setting3">setting 3</div>
-		<img class="x" src="icons/x.png"></img>
+	<div class="settingsContainer">
+		<div class="x"></div>
+		<img class="settingsIcon" src="icons/settings.png"></img>
+		<div class="settingsBox"></div>
+		<div class="settingsTextContainer">
+			<div class="settingsTitle">Click to toggle</div>
+			<div class="setting1">setting 1</div>
+			<div class="setting2">setting 2</div>
+			<div class="setting3">setting 3</div>
+		</div>
 	</div>
 
 	<div class="background"></div>
 
 	<script src="script/jquery.js"></script>
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script> -->
 	<script type="text/javascript" src="script/functions.js"></script>
 	<script type="text/javascript" src="script/script.js"></script>
 
