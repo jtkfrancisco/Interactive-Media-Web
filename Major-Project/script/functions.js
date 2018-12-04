@@ -2,14 +2,21 @@ var d = new Date();
 minute = d.getMinutes();
 hour = d.getHours();
 timeInMinutes = hour*60+minute
+manualNameEntry = 0
 
 //prompts for username, stores in localStorage
-function setName(){
+function setName(manualNameEntry){
 	//initial name get and storage 
 	if(localStorage.getItem("userName")==undefined||localStorage.getItem("userName")==null){
-		userInput = prompt("Hello, its lovely to meet you. Can I ask your name?")
+		userInput = prompt("Hello, its lovely to meet you. May I ask your name?")
 		localStorage.setItem("userName", userInput);
 		$(".greeting").text("Hello, "+userInput)
+
+	} else if(manualNameEntry==1){
+		userInput = prompt("May I ask your name?")
+		localStorage.setItem("userName", userInput);
+		$(".greeting").text("Hello, "+userInput)
+
 	} else {
 		//Retrieve and display name
 		userName = localStorage.getItem("userName");
@@ -23,6 +30,7 @@ function getTimeInMinutes(){
 	return timeInMinutes	
 }
 
+//returns date in the form of a number 0-6 [sunday-saturday]
 function getDate(){
 
 	return d.getDay()
@@ -196,13 +204,13 @@ function settingsClose(){
 function graphOpen(){
 	$(".closeGraphButton").css("display", "initial")
 	$(".canvas").css("display","initial")
-	$(".canvas").animate({width: "600px", height:"240px", bottom:"4%", left: "4%"},500)
+	$(".canvas").animate({width: "600px", height:"240px", top:"70px", left: "0px"},500)
 	$(".graphButton").css("background", "cornflowerblue")
 }
 
 //closes the canvas window that stores the graph
 function graphClose(){
-	$(".canvas").animate({width: "30px", height:"30px", bottom:"334px", left: "480px"},500)
+	$(".canvas").animate({width: "30px", height:"30px", top:"0px", left: "420px"},500)
 	$(".canvas").toggle(5)
 	$(".closeGraphButton").css("display", "none")
 	$(".graphButton").css("background", "initial")
@@ -289,4 +297,32 @@ function setupCurrentDayData(currentDateNumber){
 		localStorage.setItem(".day"+currentDateNumber, parseInt(20))
 		console.log("storing default currentPosition")
 	} 
+}
+
+function checkMinimalMode(){
+	//if there is no info stored about container state, instantiate it as true becasue that is the default state
+	if(localStorage.getItem("mainContainerOpen")==undefined){
+		localStorage.setItem("mainContainerOpen", "true")
+
+	//if the stored data reports the conainer as closed reflect this in its display
+	} else if(localStorage.getItem("mainContainerOpen")=="false"){
+		$(".mainContainer").css("display","none")
+
+	//if the stored data reports true then reflect this in its display
+	} else if(localStorage.getItem("mainContainerOpen")=="true"){
+		localStorage.setItem("mainContainerOpen", "true")
+		$(".mainContainer").css("display","initial")
+	}
+}
+
+function toggleMinimalMode(){
+	//if the stored data is reporting open, toggle the state to closed and store
+	if(localStorage.getItem("mainContainerOpen")=="true"){
+		$(".mainContainer").toggle(500)
+		localStorage.setItem("mainContainerOpen", "false")
+	//if the stored data is reporting closed, toggle the state to open and store
+	} else if(localStorage.getItem("mainContainerOpen")=="false"){
+		$(".mainContainer").toggle(500)
+		localStorage.setItem("mainContainerOpen", "true")
+	}
 }

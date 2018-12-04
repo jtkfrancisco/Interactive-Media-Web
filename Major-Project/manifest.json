@@ -1,7 +1,7 @@
 {
  "manifest_version": 2,
- "name": "Cozy Chrome Hub",
- "description": "A cosy chrome hub, displaying the date, time, weather and reminders to keep you mindful.",
+ "name": "Cozy Chrome Hub for Mental Well-being",
+ "description": "A cozy chrome hub, displaying the date, time, weather and reminders to keep you mindful.",
  "version": "1",
  "author": "Justin Francisco",
 "browser_action": {

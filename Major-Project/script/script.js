@@ -1,23 +1,26 @@
 //todo
-//implement settings and suggestions [reset all]
-
-//make statements reflect sunset times [todo]
-
-//fix open and closing of graph buttons [todo]
-
+//implement settings and suggestions
+//make statements reflect sunset times [later]
+//fix weather icon
 
 var timeDifferenceSetting = 10 //minimum amount of time in minutes between weathermap pings
 var fadeTime = 300 //time in miliseconds it takes to fade certain animations
 var increment = 20 //controls the amount in px per step in the graph [do not change]
 
 setName()
+checkMinimalMode()
+console.log("minimalMode is "+localStorage.getItem("mainContainerOpen"))
+
 setLocation()
 setBackground()
 setInquiryCase()
-currentDateNumber=getDate()
+currentDateNumber = getDate()
 retrieveDayData()
 setupCurrentDayData(currentDateNumber)
 timeInMinutes = getTimeInMinutes()
+
+
+
 
 //gets raw city name from IP lookup
 var userCity=localStorage.getItem("rawCity") 
@@ -74,7 +77,7 @@ $(".option1").on("click", function(){
 })
 
 //on click, incrementally decrease bar height by 20px [working]
-$(".option3").on("click",function(){
+$(".option3").on("click", function(){
 	currentPosition=localStorage.getItem(".day"+currentDateNumber)
 
 	if($(".day"+currentDateNumber).css("height")!="20px"){
@@ -84,3 +87,16 @@ $(".option3").on("click",function(){
 	}	
 	localStorage.setItem(".day"+currentDateNumber, currentPosition)
 })
+
+
+$(".setting1").on("click", function(){
+
+	setName(1)
+})
+
+$(".setting2").on("click", function(){
+	checkMinimalMode()
+	toggleMinimalMode()
+	// console.log("setting2 clicked, container open is "+localStorage.getItem("mainContainerOpen"))
+})
+

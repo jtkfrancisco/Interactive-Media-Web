@@ -65,14 +65,14 @@ pre{
     width: 240px;
 }
 
-.mainTextBox{
+.mainContainer{
 	position: absolute;
-	bottom: 44%;
+	bottom: 5%;
 	left: 4%;
 	font-size: 3rem;
 	/*background: cornflowerblue;*/
 	width: 605px;
-    height: 110px;
+    height: 435px;
     cursor: default;
 }
 
@@ -222,7 +222,7 @@ pre{
     border-radius: 5px;
     font-size: 1rem;
     font-style: italic;
-    color: white;
+    color: cornflowerblue;
     text-align: center;
     line-height: 28px;
 }
@@ -242,10 +242,6 @@ pre{
 }
 
 .setting1:hover{
-    border-style: solid;
-    border-color: white;
-    border-width: 2px;
-    border-radius: 5px;
     color: black;
     background: white;
     cursor: pointer;
@@ -266,10 +262,6 @@ pre{
 }
 
 .setting2:hover{
-    border-style: solid;
-    border-color: white;
-    border-width: 2px;
-    border-radius: 5px;
     color: black;
     background: white;
     cursor: pointer;
@@ -277,7 +269,7 @@ pre{
 
 .setting3{
 	position: absolute;
-	top: 120px;
+	top: 260px;
     left: 9px;
     width: 180px;
     height: 30px;
@@ -290,12 +282,8 @@ pre{
 }
 
 .setting3:hover{
-    border-style: solid;
-    border-color: white;
-    border-width: 2px;
-    border-radius: 5px;
     color: black;
-    background: white;
+    background: red;
     cursor: pointer;
 }
 
@@ -305,10 +293,10 @@ pre{
     cursor: default;
     display: none;
 
-    bottom: 334px;
-    left: 480px;
-    width: 30px;
-    height: 30px;
+    top: 0px;
+    left: 420px;
+    width: 20px;
+    height: 20px;
 
     border-style: solid;
     border-color: white;
